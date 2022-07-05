@@ -9,11 +9,11 @@
 </head>
 <body>
 
+
 <?php
-
-$name= "Mateusz Parasiewicz"
-
+    echo "Hello world";
 ?>
-    <h1><?php echo $name;?></h1>
+
+
 </body>
 </html>
