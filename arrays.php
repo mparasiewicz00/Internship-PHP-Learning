@@ -11,9 +11,15 @@
 
 <?php
 
-$numberList = [24, 64 , 89123, 87, 98 ,989898, 8882, '<h1>Hello</h1>'];
+$numberList = [10, 20, 30];
 
-echo $numberList[1];
+//print_r($numberList);
+
+echo $numberList[1] . "<br>";
+
+$names = ["first_name" => 'Mateusz', "last_name" => 'Parasiewicz'];
+
+echo $names["first_name"] . " " . $names["last_name"];
 
 ?>
 
