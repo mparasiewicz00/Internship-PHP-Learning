@@ -14,8 +14,8 @@
 
 //SWITCH:CASE STATEMENTS
 
-//$number = 100
-//;
+//$number = 100;
+//
 //
 //switch($number){
 //    case 34:
