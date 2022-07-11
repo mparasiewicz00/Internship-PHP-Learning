@@ -34,15 +34,16 @@ echo strtoupper($string);
 echo "<br>";
 echo strtolower($string);
 
+//ARRAY
 
+$list = [12,123,1234,12312,55,322];
 
-
-
-
-
-
-
-
+echo max($list);
+echo "<br>";
+echo min($list);
+echo "<br>";
+print_r($list);
+echo "<br>";
 
 ?>
 
