@@ -42,8 +42,7 @@ if (!in_array($username, $names)){
 </head>
 <body>
 
-<form action="formdata.php" method="post">
-
+<form action="form_process.php" method="post">
 
 
     <input type="text" name="username" placeholder="Enter Username">
