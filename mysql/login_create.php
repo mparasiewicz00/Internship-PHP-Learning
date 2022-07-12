@@ -2,20 +2,21 @@
 if(isset($_POST['submit'])){
 $username = $_POST['username'];
 $password = $_POST['password'];
-
 $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 
     if($connection) {
         echo "Server connected";
-
     }else {
         die("Connecting failed");
     }
 
+$query = "INSERT INTO users(username, password)  ";
+    $query .= "VALUES('$username', '$password')";
 
-
-
-
+$result = mysqli_query($connection, $query);
+if(!$result) {
+    die('Query faled!'. mysqli_error());
+}
 
 
 
@@ -49,7 +50,7 @@ $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 <div class="container">
 
     <div class="col-sm-6">
-        <form action="login.php" method="post">
+        <form action="login_create.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="username" name="username" class="form-control">
