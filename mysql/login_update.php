@@ -1,12 +1,5 @@
-<?php include "db.php";
-
-$query = "SELECT * FROM users ";
-$result = mysqli_query($connection, $query);
-if(!$result) {
-    die('Query faled!'. mysqli_error());
-}
-
-?>
+<?php include "db.php"; ?>
+<?php include "functions.php"; ?>
 
 <!doctype html>
 <html lang="en">
@@ -36,8 +29,12 @@ if(!$result) {
             </div>
 
             <div class="form-group mt-2">
-                <select name="" id="">
-                    <option value="">Id</option>
+                <select name="id" id="">
+            <?php
+
+            showAllData();
+
+            ?>
                 </select>
             </div>
 
