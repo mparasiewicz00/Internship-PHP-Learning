@@ -1,33 +1,21 @@
-<?php
+<?php include "db.php";
+
+
+
 if(isset($_POST['submit'])){
+
+    global $connection;
 $username = $_POST['username'];
 $password = $_POST['password'];
-$connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 
-    if($connection) {
-        echo "Server connected";
-    }else {
-        die("Connecting failed");
-    }
 
-$query = "INSERT INTO users(username, password)  ";
+    $query = "INSERT INTO users(username, password)  ";
     $query .= "VALUES('$username', '$password')";
 
-$result = mysqli_query($connection, $query);
-if(!$result) {
-    die('Query faled!'. mysqli_error());
-}
-
-
-
-//if($username && $password) {
-//    echo $username;
-//    echo $password;
-//}
-//else{
-//    echo "This field cannot be blank";
-//}
-
+    $result = mysqli_query($connection, $query);
+    if(!$result) {
+        die('Query faled!'. mysqli_error());
+    }
 
 }
 ?>
@@ -58,7 +46,7 @@ if(!$result) {
                 <input type="password" name="password" class="form-control">
             </div>
 
-            <input class="btn btn-primary mt-2"   type="submit" name="submit" value="Submit" >
+            <input class="btn btn-primary mt-2"   type="submit" name="submit" value="CREATE" >
 
         </form>
     </div>
