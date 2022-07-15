@@ -1,15 +1,15 @@
 <?php include "db.php"; ?>
 <?php include "functions.php"; ?>
 
-<?php UpdateTable(); ?>
+<?php deleteRows(); ?>
 
 <?php include "includes/header.php";?>
 
 <div class="container">
 
     <div class="col-sm-6">
-        <h1 class="text-center">Update</h1>
-        <form action="login_update.php" method="post">
+        <h1 class="text-center">Delete </h1>
+        <form action="login_delete.php" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" class="form-control">
@@ -28,11 +28,10 @@
                 </select>
             </div>
 
-
             <input class="btn btn-primary mt-2"   type="submit" name="submit" value="UPDATE" >
 
         </form>
 
     </div>
 
-<?php include "includes/footer.php"?>
+<?php include "includes/footer.php";?>
