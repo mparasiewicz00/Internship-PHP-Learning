@@ -1,10 +1,7 @@
-<?php
+<?php session_start();
 
-$name = "someName";
-$value = 100;
-$expiration = time() + (60*60*24*7);
+echo $_SESSION['greeting'];
 
-setcookie($name, $value, $expiration);
 ?>
 
 
@@ -18,19 +15,6 @@ setcookie($name, $value, $expiration);
     <title>Document</title>
 </head>
 <body>
-<?php
-
-
-if(isset($_COOKIE["someName"])){
-
-$someOne = $_COOKIE["someName"];
-echo $someOne;
-
-} else {
-    $someOne = "";
-}
-
-?>
 
 </body>
 </html>
