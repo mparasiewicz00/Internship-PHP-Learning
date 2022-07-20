@@ -34,7 +34,7 @@ echo $truck->wheels = 10 ."<br>";
 echo $truck->doors ."<br>";
 
 class Plane extends Car {
-
+    var $wheels = 20;
 }
 $jet = new Plane();
 $jet->MoveWheels();
